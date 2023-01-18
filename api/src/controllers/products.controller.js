@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Products } = require("../db");
+const { Products, Restaurants } = require("../db");
 
 const getProducts = async (req, res) => {
   try {
@@ -15,7 +15,8 @@ const getProducts = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try {
-    const { name, photo, price, description } = req.body;
+    const { id } = req.params;
+    const { name, photo, price, description, stock } = req.body;
     if (!name || !photo || !price || !description) {
       res.json({ msg: "Please complete all fields" });
     }
@@ -24,10 +25,18 @@ const createProduct = async (req, res) => {
       photo,
       price,
       description,
+      restaurantId: id,
+      stock,
     });
+    console.log(newProduct, "el producto a agregar");
+    let restaurant = await Restaurants.findOne({
+      where: { id: id },
+    });
+    const añadirProducto = await restaurant.addProducts(newProduct);
+    console.log(añadirProducto, "el añadir producto");
     res.json(newProduct);
   } catch (error) {
-    console.error(error);
+    console.error("este es el error", error);
   }
 };
 
@@ -54,9 +63,9 @@ const deleteProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const deleteProduct = await Products.destroy({ where: { id } });
-    res.json(deleteProduct);
+    res.send("Este producto ha sido borrado");
   } catch (error) {
-    console.error(error);
+    console.error("este es el error", error);
   }
 };
 

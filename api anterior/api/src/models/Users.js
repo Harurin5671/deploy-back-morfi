@@ -5,14 +5,14 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define("Users", {
     id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
       primaryKey: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     photo: {
       type: DataTypes.TEXT,
@@ -20,7 +20,6 @@ module.exports = (sequelize) => {
     },
     user_mail: {
       type: DataTypes.STRING,
-      unique: true,
     },
     password: {
       type: DataTypes.STRING,
@@ -34,6 +33,10 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       defaultValue: null,
     },
+    myBusinnes: {
+      type: DataTypes.STRING,
+      defaultValue: null,
+    },
     favorites: {
       type: DataTypes.STRING,
       defaultValue: null,
@@ -43,7 +46,5 @@ module.exports = (sequelize) => {
       allowNull: false,
       defaultValue: false,
     },
-    isValid: { type: DataTypes.BOOLEAN, defaultValue: false },
-    uniqueKey: { type: DataTypes.STRING },
   });
 };

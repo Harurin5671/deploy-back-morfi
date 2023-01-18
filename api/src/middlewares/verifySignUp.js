@@ -9,6 +9,7 @@ const checkExistingUser = async (req, res, next) => {
       return res.status(400).json({ message: "The email already exists" });
     next();
   } catch (error) {
+    console.log(error, "el error del checkExistingUser");
     res.status(500).json({ message: error.message });
   }
 };

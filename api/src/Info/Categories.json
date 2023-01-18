@@ -1,0 +1,37 @@
+[
+    {
+      "name": "Pizzas",
+      "photo": "https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2021/03/30/6063031b90a87.r_d.1083-871-0.jpeg",
+      "id": "1"
+    },
+    {
+      "name": "Empanadas",
+      "photo": "https://assets.unileversolutions.com/recipes-v2/239857.jpg",
+      "id": "2"
+    },
+    {
+      "name": "Hamburguesas",
+      "photo": "https://easyrecetas.com/wp-content/uploads/2020/05/Receta-de-Hamburguesas-Texanas.jpg",
+      "id": "3"
+    },
+    {
+      "name": "Milanesas",
+      "photo": "https://www.serargentino.com/public/images/2020/04/sanguche-de-milanesa-773x458.jpeg",
+      "id": "4"
+    },
+    {
+      "name": "Helados",
+      "photo": "https://bluebell.com.ar/carta/wp-content/uploads/kilohelado.jpg",
+      "id": "5"
+    },
+    {
+      "name": "Comida Vegana",
+      "photo": "https://cdn7.kiwilimon.com/articuloimagen/31213/320x320/30418.jpg.webp",
+      "id": "6"
+    },
+    {
+      "name": "Pollo",
+      "photo": "https://t1.uc.ltmcdn.com/es/posts/5/5/1/como_hacer_pollo_frito_al_estilo_kfc_43155_600_square.jpg",
+      "id": "7"
+    }
+  ]

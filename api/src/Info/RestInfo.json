@@ -1,0 +1,49 @@
+[
+    {   
+    "name":"McDonalds",
+    "photo":"https://pbs.twimg.com/profile_images/1407809827552862211/SZHKQKmL_400x400.jpg",
+    "reviews":[""],
+    "description":"Arcos Dorados es el mayor franquiciado independiente de McDonalds del mundo y la cadena de restaurantes de servicio rápido más grande en América Latina y el Caribe.",
+    "id":"1"},
+
+    {"name":"KFC",
+    "photo":"https://i.pinimg.com/originals/ee/fd/cf/eefdcf8f23c277bfac155152c6ab3a20.jpg",
+    "reviews":[""],
+    "description":"KFC corporations, (Kentucky Fried Chicken) es la marca líder especializada en los productos de pollo con más de 17.000 restaurantes en todo el mundo con sede en Louisville. Pertenece al grupo YUM! del que forman parte las cadenas de comida rápida Pizza Hut y Taco Bell.",
+    "id":"2"},
+
+    {"name":"Kentucky",
+    "photo":"https://emprelatam.com/wp-content/uploads/2019/06/Kentucky-pizza-2.jpg",
+    "reviews":[""],
+   
+    "description":"Picsa, pixa o pitsa, según quien lo pronuncie. Amamos que la coman de parados en el mostrador, o en la mesa con amigos. Con la mano o con cubiertos. Amamos que entren por el olorcito o porque vinieron después del cine. Que coman la fainá (o fáina, como prefieran) fría o caliente; arriba o abajo de la muzza. Que se la lleven para desayunar al día siguiente. Amamos que la pizza sea parte de nuestras vidas. Tanto la amamos, que desde 1942 estamos abiertos desde la mañana hasta la madrugada, porque no hay hora para comer una buena pizza. Una pizza hecha con amor, nuestra pizza.",
+    "id":"3"},
+    
+    {"name":"Rincon Norteño",
+    "photo":"https://assets.unileversolutions.com/recipes-v2/239857.jpg",
+    "reviews":[""],
+    
+    "description":"Desde nuestros inicios nos direccionamos en la búsqueda de la recuperación del sabor de la cocina auténtica, artesanal y originaria del norte de nuestro país. En la actualidad somos reconocidos por nuestras empanadas que, por su delicioso sabor y considerable tamaño, hoy nos diferencian y posicionan en este mercado.",
+    "id":"4"},
+    
+    {"name":"El club de la Milanesa",
+    "photo":"https://www.elclubdelamilanesa.com/images/gui/logo.png",
+    "reviews":[""],
+   
+    "description":"Somos un bar temático de milanesas cuya propuesta combina la tradicionalidad de la clásica milanesa con su versatilidad en la combinación de sabores e ingredientes, en un ambiente cálido, joven y moderno. Ofrecemos milanesas de ternera, pollo, soja, calabaza, fritas o al horno, acompañadas con la más variada selección de guarniciones y ensaladas. De lunes a viernes hábiles y al medio día ofrecemos menú ejecutivo. Somos el primer restaurante dedicado a vender milanesas y solo milanesas!",
+    "id":"5"},
+    
+    {"name":"Grido",
+    "photo":"https://upload.wikimedia.org/wikipedia/commons/0/0b/Logo_blanco_chico.jpg",
+    "reviews":[""],
+   
+    "description":"Fruto de más de 80 años y tres generaciones de experiencia en el mercado, Oscar Lucas Santiago junto a sus hijos crean Grido, con el sueño de que todas las personas puedan acceder a un alimento delicioso, divertido y nutritivo. En 18 años de historia, Grido ha logrado convertirse en sinónimo de helado. Calidad, calidez, variedad, cercanía e innovación han sido los pilares que llevaron a la marca a convertirse en la principal cadena de heladerías de Latinoamérica.",
+    "id":"6"},
+    
+    {"name":"Grean Eat",
+    "photo":"https://lareu.com/wp-content/uploads/2021/05/GREENEAT-2.jpg",
+    "reviews":[""],
+    
+    "description":"Recetas diferentes, repletas de sabores de estación que generan amor a primera pizca., Nada de agregados químicos, conservantes ni cosas raras como promesa irrenunciable. Nada, niente, rien, nothing.",
+    "id":"7"}
+]

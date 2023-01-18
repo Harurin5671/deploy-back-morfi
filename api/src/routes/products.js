@@ -9,7 +9,7 @@ const {
 
 router.get("/products/:id", getProducts);
 
-router.post("/create-product", createProduct);
+router.post("/create-product/:id", createProduct);
 
 router.put("/update-product/:id", updateProduct);
 

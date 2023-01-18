@@ -1,0 +1,148 @@
+[
+    {
+      "name": "Big Mac",
+      "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kqXt7Sq2/200/200/original?country=ar",
+      "price": "$800",
+      "category":["Hamburguesas"]
+    },
+    {
+      "name": "Big Mac",
+      "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kqXt7Sq2/200/200/original?country=ar",
+      "price": "$800",
+      "category":["Hamburguesas"]
+    },
+    {
+      "name": "Mc Fiesta",
+      "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kqXakvb9/200/200/original?country=ar",
+      "price": "$700",
+      "category":["Hamburguesas"]
+    },
+    {
+      "name": "Cuarto de Libra con Queso",
+      "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kqXsCqnz/200/200/original?country=ar",
+      "price": "$650",
+      "category":["Hamburguesas"]
+    },
+    {
+        "name": "Agua sin gas",
+        "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kcX11dSt/200/200/original?country=ar",
+        "price": "$200",
+        "category":["bebibles"]
+      },
+      {
+        "name": "Coca Cola",
+        "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kcXrzyVZ/200/200/original?country=ar",
+        "price": "$300",
+        "category":["bebibles"]
+      },
+      {
+        "name": "Papas Medianas",
+        "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kcXmVCCk/200/200/original?country=ar",
+        "price": "$350",
+        "category":["adition"]
+      },
+      {
+        "name": "Papas con Cheddar y Bacon",
+        "photo": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kLXCKjpY/200/200/original?country=ar",
+        "price": "$400",
+        "category":["adition"]
+      },
+      {
+        "name": "Buckets 8 piezas",
+        "photo": "https://www.kfc.com.ar/images/menues/1620751786Bucket%208%20Piezas.jpg",
+        "price": "$1200",
+        "category":["Pollo"]
+      },
+      {
+        "name": "Buckets 12 piezas",
+        "photo": "https://www.kfc.com.ar/images/menues/1620751804Bucket%2012%20Piezas.jpg",
+        "price": "$1400",
+        "category":["Pollo"]
+      },
+      {
+        "name": "Buckets 11 alitas y 11 strips",
+        "photo": "https://www.kfc.com.ar/images/menues/1620751822Bucket%20Alitas%20y%20Strips.jpg",
+        "price": "$1600",
+        "category":["Pollo"]
+      },
+      {
+        "name": "Piezas",
+        "photo": "https://www.kfc.com.ar/images/menues/1545395217foto-web-piezasolas-3p.jpg",
+        "price": "$350",
+        "category":["adition"]
+      },
+      {
+        "name": "Alitas",
+        "photo": "https://www.kfc.com.ar/images/menues/1545395117foto-web-snaks-alitas.jpg",
+        "price": "$400",
+        "category":["adition"]
+      },
+      {
+        "name": "Moderna",
+        "photo": "https://www.cucinare.tv/wp-content/uploads/2021/07/Queso-en-exceso.jpg",
+        "price": "$600",
+        "category":["Pizzas"]
+      },
+      {
+        "name": "Vegetariana",
+        "photo": "https://t2.rg.ltmcdn.com/es/posts/5/2/4/pizza_vegetariana_casera_12425_orig.jpg",
+        "price": "$700",
+        "category":["Pizzas"]
+      },
+      {
+        "name": "Especial de Cebolla",
+        "photo": "https://www.solopizzas.info/wp-content/uploads/2021/01/White-and-Yellow-Simple-Fireworks-Photo-New-Year-Card-20.jpg",
+        "price": "$800",
+        "category":["Pizzas"]
+      },
+      {
+        "name": "Carne",
+        "photo": "https://63b36e9f5901da0ab37f8792.mockapi.io/api/category",
+        "price": "$200",
+        "category":["Empanadas"]
+      },
+      {
+        "name": "Pollo",
+        "photo": "https://lacampagnola.com/uploads/recipes/5dd6ec233dcd6.jpg",
+        "price": "$200",
+        "category":["Empanadas"]
+      },
+      {
+        "name": "JyQ",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOK73oRndaNT-PfldI2exmTMtaTtTy6TDtYw&usqp=CAU",
+        "price": "$200",
+        "category":["Empanadas"]
+      },
+      {
+        "name": "La Comun",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNbagQtbT_2Ljk9lBsIgmJbu5Tw9QGS5uyig&usqp=CAU",
+        "price": "$800",
+        "category":["Milanesas"]
+
+      },
+      {
+        "name": "Con Queso",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR28iw5eimCglfKKyimffJPDg_91QZGlS4yhw&usqp=CAU",
+        "price": "$900",
+        "category":["Milanesas"]
+      },
+      {
+        "name": "Helado Familiar",
+        "photo": "https://argentina.gridohelado.com/wp-content/uploads/2016/06/familiar.jpg",
+        "price": "$500",
+        "category":["Helados"]
+      },
+      {
+        "name": "Torta",
+        "photo": "https://argentina.gridohelado.com/wp-content/uploads/2019/10/Torta-Grido360X360.jpg",
+        "price": "$700",
+        "category":["Helados"]
+      },
+      {
+        "name": "Tentacion",
+        "photo": "https://argentina.gridohelado.com/wp-content/uploads/2019/10/CH_ALMENDRAS.jpg",
+        "price": "$400",
+        "category":["Helados"]
+      }
+
+  ]

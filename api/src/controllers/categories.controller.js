@@ -1,22 +1,22 @@
-const axios = require('axios');
-const urlFromApi = 'https://63b36e9f5901da0ab37f8792.mockapi.io/api/';
+const axios = require("axios");
+const { Categories } = require("../db");
 
 const getCategories = async (req, res) => {
-    try {
-      const { data } = await axios.get(urlFromApi + 'category');
-      if (data.length <= 0) {
-          throw new Error(data);
-        }else{
-            const allCategories = data.map((category)=>category)
-            console.log(allCategories)
-            res.status(200).send(allCategories)
-        }
-    } catch (error) {
-      res.status(400).send(error);
-    }
-  };
+  try {
+    const JSON = require("../info/Categories.json");
+    const allCategories = JSON.map((category) => category.name);
+    // console.log(typesPokemon)
+    allCategories.forEach((e) => {
+      Categories.findOrCreate({
+        where: { name: e },
+      });
+    });
+    res.send(allCategories);
+  } catch (error) {
+    res.send("error perro");
+  }
+};
 
-  module.exports = {
-    getCategories
-  };
-  
+module.exports = {
+  getCategories,
+};

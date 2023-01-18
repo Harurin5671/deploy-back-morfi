@@ -1,26 +1,22 @@
 const { Router } = require("express");
 const auth = require("./auth");
+const restaurantRoute = require("./Restaurants");
+const userRoute = require("./Users");
 const products = require("./products");
-const {
-  getRestaurants,
-  getRestaurantById,
-  getRestaurantByName,
-} = require("../controllers/restaurant.controller");
-const { getCategories } = require("../controllers/categories.controller");
+const categories = require("./categories")
+const mercadoPago = require("./mercadoPago")
+
 // import all controllers
 // import SessionController from './app/controllers/SessionController';
 
-const routes = Router();
+const router = new Router();
 
 // Add routes
-routes.get("/", (req, res) => {
-  res.send("DEPLOY MORFI");
-});
-routes.get("/restaurants", getRestaurants);
-routes.get("/restaurants/:id", getRestaurantById);
-routes.get("/restaurant", getRestaurantByName);
-routes.use("/", auth);
-routes.use("/", products);
-routes.use("/categories", getCategories);
+router.use("/restaurants", restaurantRoute);
+router.use("/users", userRoute);
+router.use("/", products);
+router.use("/", auth);
+router.use("/", categories);
+router.use("/", mercadoPago);
 
-module.exports = routes;
+module.exports = router;
