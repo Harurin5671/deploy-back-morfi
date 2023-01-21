@@ -2,17 +2,7 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const {
-  DB_USER,
-  DB_PASSWORD,
-  DB_HOST,
-  PGUSER,
-  PGPASSWORD,
-  PGHOST,
-  PGPORT,
-  PGDATABASE,
-  DB_DEPLOY,
-} = process.env;
+const { DB_DEPLOY } = process.env;
 
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false, // set to console.log to see the raw SQL queries
@@ -66,7 +56,6 @@ Restaurants.belongsToMany(
 
 Users.belongsToMany(Restaurants, { through: "user_restaurant" });
 Restaurants.belongsToMany(Users, { through: "user_restaurant" });
-
 
 Restaurants.belongsToMany(Categories, { through: "restaurant_categories" });
 Categories.belongsToMany(Restaurants, { through: "restaurant_categories" });

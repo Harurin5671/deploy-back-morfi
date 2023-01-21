@@ -107,7 +107,6 @@ const sendMail = async (user, uniqueKey) => {
   </body>
 </html>`, // html body
   });
-  console.log("Message sent: %s", info.messageId);
   return;
 };
 
