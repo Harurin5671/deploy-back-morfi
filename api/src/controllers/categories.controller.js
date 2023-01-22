@@ -3,7 +3,7 @@ const { Categories } = require("../db");
 
 const getCategories = async (req, res) => {
   try {
-    const JSON = require("../info/Categories.json");
+    const JSON = require("../Info/Categories.json");
     const allCategories = JSON.map((category) => category.name);
     allCategories.forEach((e) => {
       Categories.findOrCreate({
@@ -12,7 +12,7 @@ const getCategories = async (req, res) => {
     });
     res.send(allCategories);
   } catch (error) {
-    res.send("error perro");
+    console.error(error);
   }
 };
 
