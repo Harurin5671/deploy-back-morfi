@@ -62,7 +62,7 @@ Categories.belongsToMany(Restaurants, { through: "restaurant_categories" });
 
 Restaurants.hasMany(Products);
 Products.belongsTo(Restaurants);
-S;
+
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize, // para importart la conexión { conn } = require('./db.js');
