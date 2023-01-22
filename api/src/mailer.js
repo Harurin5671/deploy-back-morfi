@@ -52,7 +52,7 @@ const sendMail = async (user, uniqueKey) => {
                   <td style="padding:0 0 36px 0;color:#153643;">
                     <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Muchas Gracias por registrarse en MORFI, bienvenid@ a nuestra pagina ${user.name}.</h1>
                     <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Para poder verificar tu cuenta y disfrutar de todo nuestro contenido por favor has click en el siguiente enlace:</p>
-                    <p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><a href="http://localhost:3000/verify/${uniqueKey}" style="color:#11F930;text-decoration:underline;">Link de Verificación</a></p>
+                    <p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"><a href="https://deploy-front-morfi.vercel.app/verify/${uniqueKey}" style="color:#11F930;text-decoration:underline;">Link de Verificación</a></p>
                   </td>
                 </tr>
                 <tr>
