@@ -1,12 +1,19 @@
 const { Router } = require("express");
 const router = Router();
-const { signUp, login, verify } = require("../controllers/auth.controller");
+const {
+  signUp,
+  login,
+  verify,
+  callbackGoogle,
+  private,
+} = require("../controllers/auth.controller");
 const { checkExistingUser } = require("../middlewares/verifySignUp");
-const axios = require("axios");
 
 router.post("/signup", checkExistingUser, signUp);
-
 router.post("/login", login);
+
+router.get("/verificacionDeTokensGoogle", private);
+router.get("/obtencionDeTokensGoogle", callbackGoogle);
 
 router.put("/verify/:uniqueKey", verify);
 

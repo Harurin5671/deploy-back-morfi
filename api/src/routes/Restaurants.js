@@ -15,6 +15,8 @@ routes.post("/:id", controllerRestaurants.newRestaurant);
 
 routes.get("/name/getbyname", controllerRestaurants.getRestaurantByName);
 
+routes.delete("/:id", controllerRestaurants.deleteRestaurant);
+
 // routes.post('/', controllerRestaurants.postRestaurant)
 
 // routes.put('/:id', controllerRestaurants.putRestaurant)

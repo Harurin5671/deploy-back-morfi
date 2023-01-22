@@ -11,5 +11,5 @@ routes.put("/banned/:id", userControllers.isBanned);
 routes.put("/update/:id", userControllers.userUpdate);
 routes.put("/admin/:id", userControllers.isAdmin);
 routes.delete("/:id", userControllers.deleteUser);
-
+routes.put("/photo/:id", userControllers.userPhotoCloudinary);
 module.exports = routes;
