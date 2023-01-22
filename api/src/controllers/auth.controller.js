@@ -82,9 +82,8 @@ const private = async (req, res) => {
 };
 
 const verify = async (req, res) => {
-  const { uniqueKey } = req.query;
+  const { uniqueKey } = req.params;
   console.log(uniqueKey);
-
   const user = await Users.findOne({
     where: { uniqueKey },
   });
