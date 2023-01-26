@@ -12,7 +12,7 @@ const getCategories = async (req, res) => {
     });
     res.send(allCategories);
   } catch (error) {
-    res.send("error perro");
+    console.error(error);
   }
 };
 
