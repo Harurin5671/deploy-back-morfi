@@ -3,9 +3,8 @@ const { Categories } = require("../db");
 
 const getCategories = async (req, res) => {
   try {
-    const JSON = require("../info/Categories.json");
+    const JSON = require("../Info/Categories.json");
     const allCategories = JSON.map((category) => category.name);
-    // console.log(typesPokemon)
     allCategories.forEach((e) => {
       Categories.findOrCreate({
         where: { name: e },
