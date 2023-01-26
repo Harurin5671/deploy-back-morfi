@@ -15,13 +15,19 @@ const getInfoDb = async (req, res) => {
         "createdAt",
         "updatedAt",
         "password",
+        "surname",
+        "phone",
+        "identification",
+        "postalCode",
+        "street_name",
+        "street_number",
       ],
       include: [Restaurants],
     });
 
     res.status(200).send(dBDeploy);
   } catch (error) {
-    console.log(error);
+    console.error(error, "error user.controller");
     res.status(400).send(error);
   }
 };
@@ -31,6 +37,7 @@ const getInfoById = async (req, res) => {
     const infoId = await Users.findByPk(id, {
       include: [{ model: Restaurants }],
     });
+    console.log(infoId);
     const userById = await infoId.dataValues;
     res.status(200).send(userById);
   } catch (error) {
@@ -103,7 +110,17 @@ const isAdmin = async (req, res) => {
 const userUpdate = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, user_mail, password } = req.body;
+    const {
+      name,
+      user_mail,
+      password,
+      surname,
+      phone,
+      identification,
+      postalCode,
+      street_name,
+      street_number,
+    } = req.body;
     const salt = 10;
     const hash = await bcrypt.hash(password, salt);
     const userUpdate = await Users.update(
@@ -111,6 +128,12 @@ const userUpdate = async (req, res) => {
         name: name,
         user_mail: user_mail,
         password: hash,
+        surname: surname,
+        phone: phone,
+        identification: identification,
+        postalCode: postalCode,
+        street_name: street_name,
+        street_number: street_number,
       },
       {
         where: {
@@ -137,9 +160,11 @@ const userPhotoCloudinary = async (req, res) => {
   try {
     const { id } = req.params;
     const { dataFinal } = req.body;
+    console.log(dataFinal, "back undefined");
     const userUpdatedPhoto = await Users.findByPk(id);
     userUpdatedPhoto.photo = dataFinal;
     const saved = await userUpdatedPhoto.save();
+    console.log(saved);
     res.status(200).send(saved);
   } catch (error) {
     console.log(error.message);

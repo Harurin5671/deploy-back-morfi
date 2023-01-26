@@ -11,9 +11,10 @@ module.exports = (sequelize) => {
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
+      unique: false,
+      allowNull: true,
     },
+
     photo: {
       type: DataTypes.TEXT,
       defaultValue: null,
@@ -50,10 +51,38 @@ module.exports = (sequelize) => {
     },
     isValid: { type: DataTypes.BOOLEAN, defaultValue: false },
     uniqueKey: { type: DataTypes.STRING },
-    isBanned: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: false,
+
+    surname: {
+      type: DataTypes.STRING,
+      defaultValue: null,
+      unique: false,
+      allowNull: true,
+    },
+    phone: {
+      type: DataTypes.INTEGER,
+      defaultValue: null,
+      unique: false,
+      allowNull: true,
+    },
+    identification: {
+      type: DataTypes.INTEGER,
+      defaultValue: null,
+    },
+    postalCode: {
+      type: DataTypes.INTEGER,
+      defaultValue: null,
+      allowNull: true,
+      unique: false,
+    },
+    street_name: {
+      type: DataTypes.STRING,
+      defaultValue: null,
+      unique: false,
+    },
+    street_number: {
+      type: DataTypes.INTEGER,
+      defaultValue: null,
+      unique: false,
     },
   });
 };

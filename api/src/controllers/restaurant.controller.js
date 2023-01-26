@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Restaurants, Categories, Users, Products } = require("../db");
+const { Restaurants, Categories, Users, Products, Reviews } = require("../db");
 
 const getAllRestaurants = async (req, res) => {
   const getRestaurantsDb = await Restaurants.findAll({
@@ -13,7 +13,9 @@ const newRestaurant = async (req, res) => {
     const { id } = req.params;
     const { name, photo, categories, descriptions, reviews, products } =
       req.body;
+    console.log("LALALALALAA");
     const infoIdUser = await Users.findByPk(id);
+    console.log(infoIdUser, "La info id user");
     const createRestaurant = await Restaurants.create({
       name,
       photo,
@@ -56,6 +58,21 @@ const getRestaurantByName = async (req, res) => {
     res.status(404).json({ error: "Problemas obteniendo Todos" });
   }
 };
+const addReview = async (req, res) => {
+  try {
+    const { rating, idRestaurante } = req.body;
+    const id = idRestaurante;
+    const restauranteAEditar = await Restaurants.findByPk(id);
+    console.log(restauranteAEditar, "el restaurante a esditar");
+    // await restauranteAEditar.addReviews(rating);
+    // return res.status(200).send(restauranteAEditar);
+    // return res.status(200);
+  } catch (err) {
+    // console.error(err, "EL ERROR DEL ADDREVIEWASDASD");
+    return res.status(200).send(err.message);
+  }
+};
+
 const getById = async (req, res) => {
   let { id } = req.params;
   try {
@@ -81,10 +98,12 @@ const deleteRestaurant = async (req, res) => {
     res.status(404).send(error);
   }
 };
+
 module.exports = {
   getById,
   getRestaurantByName,
   getAllRestaurants,
   newRestaurant,
   deleteRestaurant,
+  addReview,
 };

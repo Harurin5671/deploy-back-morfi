@@ -23,8 +23,9 @@ const { conn } = require("./src/db.js");
 // Syncing all the models at once.
 // Alter:true chequea el estado actual de la DB y hace los cambios necesariospara que esta matchee el modelo actual.
 //SI ES MUY DISTINTO BUGUEA Y ES NECESARIO FORCE
-conn.sync({ force: false }).then(() => {
-  server.listen(process.env.PORT || 3001, () => {
-    console.log(`%s listening at ${process.env.PORT || 3001}`); // eslint-disable-line no-console
+conn.sync({ alter: true }).then(() => {
+  const port = process.env.PORT || 3001;
+  server.listen(port, () => {
+    console.log(`%s listening at ${port}`); // eslint-disable-line no-console
   });
 });

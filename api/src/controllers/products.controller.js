@@ -28,10 +28,12 @@ const createProduct = async (req, res) => {
       restaurantId: id,
       stock,
     });
+    console.log(newProduct, "el producto a agregar");
     let restaurant = await Restaurants.findOne({
       where: { id: id },
     });
     const añadirProducto = await restaurant.addProducts(newProduct);
+    console.log(añadirProducto, "el añadir producto");
     res.json(newProduct);
   } catch (error) {
     console.error("este es el error", error);

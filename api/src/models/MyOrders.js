@@ -22,6 +22,10 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     restaurant: {
       type: DataTypes.STRING,
       allowNull: false,
