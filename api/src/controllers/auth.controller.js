@@ -44,7 +44,7 @@ const callbackGoogle = async (req, res) => {
           secure: false,
         });
       })
-      .then(() => res.redirect("http://localhost:3000"));
+      .then(() => res.redirect("https://deploy-front-morfi.vercel.app"));
   } catch (err) {
     console.error(err, "el error del callbackGoogle");
   }
