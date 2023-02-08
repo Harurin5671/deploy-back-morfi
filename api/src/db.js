@@ -43,19 +43,20 @@ const {
   Categories,
   Reviews,
 } = sequelize.models;
-// Users.belongsToMany(
-//   Restaurants,
-//   { through: "user_restaurant" },
-//   { unique: true }
-// );
-// Restaurants.belongsToMany(
-//   Users,
-//   { through: "user_restaurant" },
-//   { unique: true }
-// );
 
-Users.belongsToMany(Restaurants, { through: "user_restaurant" });
-Restaurants.belongsToMany(Users, { through: "user_restaurant" });
+Users.belongsToMany(
+  Restaurants,
+  { through: "user_restaurant" },
+  { unique: true }
+);
+Restaurants.belongsToMany(
+  Users,
+  { through: "user_restaurant" },
+  { unique: true }
+);
+
+// Users.belongsToMany(Restaurants, { through: "user_restaurant" });
+// Restaurants.belongsToMany(Users, { through: "user_restaurant" });
 
 Restaurants.belongsToMany(Categories, { through: "restaurant_categories" });
 Categories.belongsToMany(Restaurants, { through: "restaurant_categories" });
