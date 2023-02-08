@@ -3,34 +3,39 @@ const { DataTypes } = require("sequelize");
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define("Products", {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    photo: {
-      type: DataTypes.TEXT,
-      defaultValue: null,
-    },
-    price: {
-      type: DataTypes.FLOAT,
-      validate: {
-        isDecimal: true,
+  sequelize.define(
+    "Restaurants",
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      photo: {
+        type: DataTypes.TEXT,
+        defaultValue: false,
+      },
+      reviews: {
+        type: DataTypes.ARRAY(DataTypes.INTEGER),
+        allowNull: true,
+      },
+      categories: {
+        type: DataTypes.ARRAY(DataTypes.JSON),
+        allowNull: true,
+      },
+      products: {
+        type: DataTypes.ARRAY(DataTypes.JSON),
+        allowNull: true,
+      },
+      descriptions: {
+        type: DataTypes.TEXT,
+        allowNull: true,
       },
     },
-    description: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: true,
-      },
-    },
-    restaurantId: {
-      type: DataTypes.INTEGER,
-      references: { model: "Restaurants", key: "id" },
-    },
-    stock: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-  });
+    { timestamps: false }
+  );
 };
